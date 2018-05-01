@@ -1,11 +1,12 @@
 using Amazon.Lambda.Core;
 using Amazon.Lambda.SNSEvents;
 using System;
+using AWSDataStore;
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
 
-namespace OrderStore
+namespace OrderToStoreLambdaEndpoint
 {
     public class Function
     {
@@ -18,19 +19,19 @@ namespace OrderStore
         /// <returns></returns>
         public string FunctionHandler(SNSEvent evnt, ILambdaContext context)
         {
-
-            context.Logger.Log("We have a message");
-
+            var order = new ClientOrderService(context.Logger);
+            
             foreach (var item in evnt?.Records)
             {
-                Console.WriteLine("C# console logger");
-                context.Logger.Log(item.Sns.Message);
+                context.Logger.Log($"details {item.Sns.Timestamp}");
+                context.Logger.Log($"sns content {item.Sns.Message}");
+
+                var result = order.CreateOrder(item.Sns.Message);
+                Console.WriteLine($"Status of order v2 : {result.Status}");
+                
                 Console.WriteLine(item.Sns.Message);
             }
-
-            context.Logger.Log("End message");
             return string.Empty;
-            
         }
     }
 }

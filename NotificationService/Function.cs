@@ -5,7 +5,7 @@ using System;
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
 
-namespace NotificationService
+namespace NotificationLambdaEndpoint
 {
     public class Function
     {        
@@ -18,6 +18,7 @@ namespace NotificationService
         public string FunctionHandler(SNSEvent evnt, ILambdaContext context)
         {
             context.Logger.Log("We have a message");
+            
 
             foreach (var item in evnt?.Records)
             {
@@ -31,3 +32,4 @@ namespace NotificationService
         }
     }
 }
+

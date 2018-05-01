@@ -7,13 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormLambdaEndpoint", "FormS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotificationLambdaEndpoint", "NotificationService\NotificationLambdaEndpoint.csproj", "{268347B2-ACAD-4D8E-99F1-E28E75823A04}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderStore", "OrderStore\OrderStore.csproj", "{F2060BA6-9E7A-4E6E-BED8-551DF7FACD04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderToStoreLambdaEndpoint", "OrderStore\OrderToStoreLambdaEndpoint.csproj", "{F2060BA6-9E7A-4E6E-BED8-551DF7FACD04}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreServices", "CoreServices\CoreServices.csproj", "{2EAEB66B-F1FB-449E-8898-7D4422FD42DC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagingService", "MessageBusWriter\MessagingService.csproj", "{FFEAC74E-4B5D-4AED-AD21-A7DB710D35C4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWSDataStore", "AWSDataStore\AWSDataStore.csproj", "{C91DDC9C-1892-43E0-AC51-35DAD9C601AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceModel", "ServiceModel\ServiceModel.csproj", "{C9D53F2B-44EA-4AFA-98A7-5D5CF7E231F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainApp", "MainApp\MainApp.csproj", "{04877CD9-FD08-400C-BC27-7DAE1D008F2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{C91DDC9C-1892-43E0-AC51-35DAD9C601AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C91DDC9C-1892-43E0-AC51-35DAD9C601AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C91DDC9C-1892-43E0-AC51-35DAD9C601AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9D53F2B-44EA-4AFA-98A7-5D5CF7E231F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9D53F2B-44EA-4AFA-98A7-5D5CF7E231F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9D53F2B-44EA-4AFA-98A7-5D5CF7E231F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9D53F2B-44EA-4AFA-98A7-5D5CF7E231F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04877CD9-FD08-400C-BC27-7DAE1D008F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04877CD9-FD08-400C-BC27-7DAE1D008F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04877CD9-FD08-400C-BC27-7DAE1D008F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04877CD9-FD08-400C-BC27-7DAE1D008F2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

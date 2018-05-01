@@ -13,7 +13,7 @@
     "function-runtime" : "dotnetcore2.0",
     "function-memory-size" : 256,
     "function-timeout"     : 30,
-    "function-handler"     : "NotificationService::NotificationService.Function::FunctionHandler",
+    "function-handler"     : "NotificationLambdaEndpoint::NotificationLambdaEndpoint.Function::FunctionHandler",
     "function-name"        : "NotificationService",
     "function-role"        : "arn:aws:iam::998081349423:role/service-role/dev",
     "tracing-mode"         : "PassThrough",

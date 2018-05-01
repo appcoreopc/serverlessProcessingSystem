@@ -13,7 +13,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <DotNetCliToolReference Include="Amazon.Lambda.Tools" Version="2.1.1" />
+    <DotNetCliToolReference Include="Amazon.Lambda.Tools" Version="2.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AWSDataStore\AWSDataStore.csproj" />
   </ItemGroup>
 
 </Project>

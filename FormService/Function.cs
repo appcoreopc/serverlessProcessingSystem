@@ -24,13 +24,13 @@ namespace FormLambdaEndpoint
         /// <returns></returns>
         public APIGatewayProxyResponse FunctionHandler(APIGatewayProxyRequest evnt, ILambdaContext context)
         {
-
-            var name = evnt.Body;
-
-            Console.WriteLine($" Getting input from user. Suspected name is {name}");
+            var body = evnt.Body;
+            //var bodyCount = evnt.Body.Count();
+            
+            context.Logger.Log(evnt.Resource);
+            context.Logger.Log($"v2 input. Suspected name is {body}");
             
             var writer = new SNSWriter();
-
             var result = writer.WriteMessage(evnt.Body);
 
             return new APIGatewayProxyResponse

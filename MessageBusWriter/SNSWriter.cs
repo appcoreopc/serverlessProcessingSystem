@@ -11,7 +11,6 @@ namespace MessagingService
 
         public PublishResponse WriteMessage<T>(T targetype)
         {
-
             try
             {
                 var message = JsonConvert.SerializeObject(targetype);
