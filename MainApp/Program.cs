@@ -39,6 +39,11 @@ namespace MainApp
 
             //Console.WriteLine(s.S);
             //Console.WriteLine(res.Status);
+            
+            var x = "{\"OrderId\": 1221, \"Email\":\"momok@gmail.com\",  \"Name\":\"Jeremy Woo\"  }";
+
+            var y = JsonConvert.DeserializeObject<OrderModel>(x);
+            
         }
     }
 }

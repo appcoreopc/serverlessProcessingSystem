@@ -84,13 +84,19 @@ namespace AWSDataStore
         {
             try
             {
+                _logger.Log($"Raw data : {orderStr}");
+
                 var config = new AmazonDynamoDBConfig();
                 config.RegionEndpoint = RegionEndpoint.APSoutheast2;
                 _client = new AmazonDynamoDBClient(config);
+                
+                var finalText = orderStr.Trim().Replace(@"\", "");
+                _logger.Log($"After replace text: {finalText}");
 
-                _logger.Log("Orderv7" + orderStr);
+                var x = finalText.Substring(1, finalText.Length - 2);
+                _logger.Log("Parsing begins Orderv17:" + x);
 
-                var orderModel = JsonConvert.DeserializeObject<OrderModel>(orderStr);
+                var orderModel = JsonConvert.DeserializeObject<OrderModel>(x);
 
                 if (orderModel != null)
                 {
